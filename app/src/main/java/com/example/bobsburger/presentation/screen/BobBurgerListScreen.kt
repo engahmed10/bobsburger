@@ -1,4 +1,4 @@
-package com.example.bobsburger.screen
+package com.example.bobsburger.presentation.screen
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
@@ -35,8 +35,8 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil3.compose.rememberAsyncImagePainter
 import com.example.bobsburger.data.response.BobBurgerResponse
-import com.example.bobsburger.ui.theme.BobBurgersViewModel
-import com.example.bobsburger.util.BobBurgerState
+import com.example.bobsburger.presentation.BobBurgersViewModel
+import com.example.bobsburger.presentation.util.BobBurgerState
 
 
 @SuppressLint("StateFlowValueCalledInComposition")
@@ -68,7 +68,7 @@ fun BurgerScreen(
                     items(state.data.size,
                         ) { index ->
                         BurgerItem(
-                            burgerChar = state.data.get(index),
+                            burgerChar = state.data[index],
                             onBurgerSelected = onBurgerSelected
                         )
                     }
@@ -106,11 +106,10 @@ fun BurgerItem(burgerChar: BobBurgerResponse, onBurgerSelected: () -> Unit) {
                     .fillMaxWidth()
                     .height(150.dp)
                     .graphicsLayer(
-                        rotationY = degree, cameraDistance = 8f
+                        rotationY = degree, cameraDistance = 8f,
+                                rotationX = degreeX
                     )
-                    .graphicsLayer(
-                        rotationX = degreeX, cameraDistance = 8f
-                    )
+
             )
             Box(modifier = Modifier.fillMaxSize(),
                 contentAlignment = Alignment.Center){

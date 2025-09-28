@@ -1,4 +1,4 @@
-package com.example.bobsburger.util
+package com.example.bobsburger.presentation.util
 
 import com.example.bobsburger.data.response.BobBurgerResponse
 

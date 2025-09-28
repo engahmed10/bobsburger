@@ -1,4 +1,4 @@
-package com.example.bobsburger.data.repository
+package com.example.bobsburger.domain
 
 import com.example.bobsburger.data.response.BobBurgerResponse
 import retrofit2.Response

@@ -6,8 +6,6 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface ApiService {
-
-//https://bobsburgers-api.herokuapp.com/characters/?limit=20&skip=0
     @GET("characters/")
     suspend fun getCharacters(
         @Query("limit") limit: String = "20",

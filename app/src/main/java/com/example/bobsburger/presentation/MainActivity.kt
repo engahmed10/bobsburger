@@ -1,4 +1,4 @@
-package com.example.bobsburger
+package com.example.bobsburger.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -7,10 +7,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.bobsburger.screen.BurgerScreen
+import com.example.bobsburger.presentation.screen.BurgerScreen
 import com.example.bobsburger.ui.theme.BobsburgerTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -26,27 +24,10 @@ class MainActivity : ComponentActivity() {
                     BurgerScreen(
                         modifier = Modifier.padding(innerPadding),
                         onBurgerSelected = {
-
                         }
                     )
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-/*    BurgerScreen(
-        modifier = modifier,
-        onBurgerSelected = {}
-    )*/
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    BobsburgerTheme {
-        Greeting("Android")
     }
 }

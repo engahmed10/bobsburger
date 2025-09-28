@@ -1,7 +1,7 @@
 package com.example.bobsburger.di
 
 import com.example.bobsburger.data.apiservice.ApiService
-import com.example.bobsburger.data.repository.BobBurgerRepository
+import com.example.bobsburger.domain.BobBurgerRepository
 import com.example.bobsburger.data.repository.BobBurgerRepositoryImpl
 import dagger.Module
 import dagger.Provides
